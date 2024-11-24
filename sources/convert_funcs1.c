@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert_num_tools1.c                               :+:      :+:    :+:   */
+/*   convert_funcs1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbeauman <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tbeauman <tbeauman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 14:43:53 by tbeauman          #+#    #+#             */
-/*   Updated: 2016/01/28 17:32:31 by tbeauman         ###   ########.fr       */
+/*   Updated: 2024/11/24 18:34:01 by tbeauman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int		convert_bs(va_list *ap, int *flags)
 int		convert_p(va_list *ap, int *flags)
 {
 	int		ret;
-	long	p;
+	unsigned long	p;
 
 	ret = 0;
 	p = va_arg(*ap, long);

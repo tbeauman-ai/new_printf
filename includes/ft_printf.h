@@ -6,7 +6,7 @@
 /*   By: tbeauman <tbeauman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/07 12:50:23 by tbeauman          #+#    #+#             */
-/*   Updated: 2024/11/24 17:16:10 by tbeauman         ###   ########.fr       */
+/*   Updated: 2024/11/24 18:34:36 by tbeauman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int				print_o(int d, int *flags);
 int				print_bo(long d, int *flags);
 int				print_u(unsigned int d, int *flags);
 int				print_bu(unsigned long d, int *flags);
-int				print_p(long p, int *flags);
+int				print_p(unsigned long p, int *flags);
 int				print_x(unsigned int x, int *flags);
 int				print_bx(unsigned int x, int *flags);
 int				print_jd(intmax_t d, int *flags);

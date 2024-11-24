@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_funcs2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbeauman <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tbeauman <tbeauman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/09 13:52:42 by tbeauman          #+#    #+#             */
-/*   Updated: 2016/01/28 16:04:50 by tbeauman         ###   ########.fr       */
+/*   Updated: 2024/11/24 18:41:50 by tbeauman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,25 @@ int		print_bu(unsigned long d, int *flags)
 	return (ret);
 }
 
-int		print_p(long p, int *flags)
+int		print_p(unsigned long p, int *flags)
 {
 	int		ret;
 
 	ret = 0;
+	if (p == 0)
+	{
+		ft_putstr("(nil)");
+		ret += 5;
+		return (ret);
+	}
 	ft_putstr("0x");
 	if (flags[13] && p == 0)
 		return (2);
 	if (flags[12] && p == 0)
 		while (flags[12]-- > 1 && ret++ > -1)
 			ft_putchar('0');
-	ft_putlong_base(p, 16);
-	ret += 2 + length_long(p, 16);
+	ft_putunslong_base(p, 16);
+	ret += 2 + length_unslong(p, 16);
 	return (ret);
 }
 
